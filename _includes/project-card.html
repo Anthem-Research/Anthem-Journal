@@ -1,0 +1,5 @@
+<a class="card project-card" href="{{ project.url | relative_url }}">
+  <p class="kicker">{{ project.status | default: 'Project' }}</p>
+  <h3>{{ project.title }}</h3>
+  {% if project.subtitle %}<p>{{ project.subtitle }}</p>{% endif %}
+</a>
