@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="article project-page">
+  <header class="article-header">
+    <p class="kicker">Project{% if page.status %} · {{ page.status }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="lede">{{ page.subtitle }}</p>{% endif %}
+  </header>
+  <div class="project-meta">
+    {% if page.stage %}<span>{{ page.stage }}</span>{% endif %}
+    {% if page.domain %}<span>{{ page.domain }}</span>{% endif %}
+    {% if page.access %}<span>{{ page.access }}</span>{% endif %}
+  </div>
+  <div class="prose article-body">
+    {{ content }}
+  </div>
+</article>
