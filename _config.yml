@@ -1,0 +1,35 @@
+title: Anthem Journal
+description: Independent art and research practice focused on sovereignty, science, technology, ecology, philosophy, and new forms of living.
+url: ""
+baseurl: ""
+lang: en
+permalink: /journal/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  input: GFM
